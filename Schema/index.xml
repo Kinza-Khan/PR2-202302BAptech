@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="index.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<aptech>
+    <faculty>
+        <facultyName>Kinza</facultyName>
+        <email></email>
+        <designation></designation>
+        <age>23</age>
+        <city>karachi</city>
+    </faculty>
+    <faculty>
+        <facultyName>aqsa</facultyName>
+        <email></email>
+        <designation></designation>
+        <age>22</age>
+        <city>lahore</city>
+    </faculty>
+    
+    <examination>
+        <empName></empName>
+        <salary></salary>
+    </examination>
+    <students></students>
+</aptech>

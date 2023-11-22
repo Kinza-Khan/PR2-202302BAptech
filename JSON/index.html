@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <title>JSON First Method</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <input type="search" class="form-control" onkeyup="searchData()" id="searchinp">
+            </div>
+            <!-- <div class="col-md-3">
+                <button class="btn btn-info" onclick="searchData()" >Search</button>
+            </div> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-around" id="row1">  
+        </div>
+    </div>
+    <script>
+        let row1 = $("#row1");
+        let col1 = "";
+        $.ajax({
+            url : "index.json",
+            type : "get",
+            success : function(data){
+             $.each(data,function(k,v){
+                col1 += `
+                <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="`+v.pImage+`" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">`+v.pName+`</h4>
+                        <p class="card-text">`+v.pPrice+`</p>
+                        <a href="detail.html?id=`+v.id+`&name=`+v.pName+`&price=`+v.pPrice+`&image=`+v.pImage+`&des=`+v.des+`">detail</a>
+                    </div>
+                </div>
+            </div> `
+             })   
+             row1.html(col1);
+
+            }
+
+        })
+
+            // SEARCHING WORK START
+            function searchData(){
+                    let inpData = $('#searchinp').val().toLowerCase();
+                    // console.log(inpData);
+                    let col2 = '';
+                    $.ajax({
+                        url : "index.json",
+                        type : 'get',
+                        success :  function(data){
+                             let finalResult =  data.filter(element => {
+                                    return element.pName.toLowerCase().indexOf(inpData)> -1 ;
+                             })  
+                            
+                             finalResult.forEach(element => {
+                                        col2 += ` <div class="col-md-3 mt-4">
+                <div class="card">
+                    <img class="card-img-top" src="`+element.pImage+`" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">`+element.pName+`</h4>
+                        <p class="card-text">`+element.pPrice+`</p>
+                    </div>
+                </div>
+            </div>`
+                             });
+                             row1.html(col2);
+                            //  console.log(finalResult);
+
+                        }
+                    }) 
+
+
+            }
+
+
+    </script>
+    
+</body>

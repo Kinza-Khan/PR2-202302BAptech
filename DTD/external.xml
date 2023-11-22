@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aptech SYSTEM "external.dtd" [
+<!ENTITY abc  "pakistan">
+]>
+<aptech>
+<admission>
+    <name timings="">&abc;</name>
+    <salary></salary>
+</admission>
+<examination>
+    <email></email>
+</examination>
+</aptech>

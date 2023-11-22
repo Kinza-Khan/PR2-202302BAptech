@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPClass</title>
+</head>
+<body>
+    <script>
+        class Human{
+            name ;
+            age ;
+            lang ;
+           speak(stdName,stdAge){
+                this.name = stdName ; 
+                this.age = stdAge;    
+                return "this is "+ stdName  + " and the age is " +stdAge
+            }
+        
+        }
+            let std1  = new Human();
+            let student1Data = std1.speak('ali',21);
+            let std2 = new Human();
+            let student2Data = std2.speak('aqsa',22);
+            console.log(student1Data);
+            console.log(student2Data);
+        </script>
+</body>
+</html>

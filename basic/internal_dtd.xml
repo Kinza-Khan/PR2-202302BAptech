@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE aptech [
+    <!ELEMENT aptech (faculty+,it*)>
+    <!ELEMENT faculty (name,email,salary)>
+    <!ELEMENT it (name,salary)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT salary (#PCDATA)>
+    <!ATTLIST faculty designation CDATA #REQUIRED>
+    <!ATTLIST name nationlity CDATA #FIXED 'pakistani'>
+    <!ATTLIST element-name attribute-name CDATA #IMPLIED>
+    <!ENTITY company "aptech shahrah-e-faisal">
+    
+]>
+<aptech>
+    <faculty designation="" >
+       
+            <name>&company;</name>
+            <email></email>
+            <salary></salary>
+    </faculty>
+    <faculty designation="">
+        <name nationlity="pakistani"></name>
+        <email></email>
+        <salary></salary>
+    </faculty>
+    <it>
+        <name nationlity="pakistani"></name>
+        <salary></salary>
+    </it>
+</aptech>

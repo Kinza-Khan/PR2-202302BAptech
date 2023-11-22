@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aptech xmlns:f1="fac1" xmlns:f2="fac2">
+    <f1:faculty  >
+        <f1:name>Ali</f1:name>
+        <f1:designation>Senior Faculty</f1:designation>
+        <f1:salary>120000</f1:salary>
+    </f1:faculty>
+
+    <f2:faculty >
+        <f2:name>Aqsa</f2:name>
+        <f2:designation>Junior Faculty</f2:designation>
+        <f2:salary>85000</f2:salary>
+    </f2:faculty>
+    <faculty>
+        <name>Hamza</name>
+        <designation>TA</designation>
+        <salary>60000</salary>
+    </faculty>
+</aptech>

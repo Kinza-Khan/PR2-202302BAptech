@@ -1,0 +1,20 @@
+{
+    "Perfumes" : [
+        {"id":1,"pName":"perfume 1","pPrice":4000,"pImage":"images/im1.jpg"},
+        {"id":2,"pName":"perfume 2","pPrice":4000,"pImage":"images/im2.jpg"},
+        {"id":3,"pName":"perfume 3","pPrice":4000,"pImage":"images/im3.jpg"},
+        {"id":4,"pName":"perfume 4","pPrice":4000,"pImage":"images/im4.jpg"}
+    ],
+    "Shoes" : [
+        {},
+        {},
+        {},
+        {}
+    ],
+    "Bags" : [
+        {},
+        {},
+        {},
+        {}
+    ]
+}

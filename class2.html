@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+        <div class="container p-5 mt-5">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Language</th>
+                <th>Food</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+          
+        </tbody>
+    </table>
+</div>
+    <script>
+        let tbody = document.querySelector('tbody');
+        let trData = "";
+        class Human{
+            name;
+            email;
+            password;
+            // food;
+            lang;
+            eat(food){
+                    return " human eats " + food;
+            }
+            speak(){
+                    return " speaks " + this.lang;
+            }                  
+        }
+        let human1 = new Human;
+        let human2 = new Human;
+        human1.name = "ali";
+        human1.email = "ali@gmail.com";
+        human1.password = 1234;
+        human1.food =  "veg";
+        human1.lang = "urdu";
+        let Food1 =  human1.eat('spinach');
+        human1.h1 = Food1;
+        human2.name = "aqsa";
+        human2.email = "aqsa@gmail.com";
+        human2.password = 123;
+        human2.food =  "nonveg";
+        human2.lang = "english";
+        let Food2 =  human2.eat('cabbage');
+        human2.h1 = Food2;
+        // console.log(human1);
+        // console.log(human2);
+        let allHuman = [human1,human2];
+        console.log(allHuman);
+        for (const key in allHuman) {
+            // console.log(allHuman[key].email)
+            trData += `  <tr>
+                <td scope="row">`+allHuman[key].name+`</td>
+                <td>`+allHuman[key].email+`</td>
+                <td>`+allHuman[key].password+`</td>
+                <td>`+allHuman[key].lang+`</td>
+                <td>`+allHuman[key].h1+`</td>
+            </tr>`
+        }
+        tbody.innerHTML = trData;
+    </script>
+</body>
+</html>
+

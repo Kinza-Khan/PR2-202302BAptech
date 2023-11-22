@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="index.xsl" type="text/xsl"?>
+<aptech>
+
+    <faculty>
+        <name>Ali</name>
+        <designation>Senior Faculty</designation>
+        <salary>120000</salary>
+        <image>im2.jpg</image>
+    </faculty>
+
+    <faculty>
+        <name>Aqsa</name>
+        <designation>Junior Faculty</designation>
+        <salary>85000</salary>
+        <image>im3.jpg</image>
+    </faculty>
+    <faculty>
+        <name>Hamza</name>
+        <designation>TA</designation>
+        <salary>60000</salary>
+        <image>im4.jpg</image>
+    </faculty>
+
+  
+</aptech>

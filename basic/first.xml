@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<aptech>
+
+    <faculty nationality="pakistani">
+        <name>Ali</name>
+        <designation>Senior Faculty</designation>
+        <salary>120000</salary>
+    </faculty>
+
+    <faculty>
+        <name>Aqsa</name>
+        <designation>Junior Faculty</designation>
+        <salary>85000</salary>
+    </faculty>
+    <faculty>
+        <name>Hamza</name>
+        <designation>TA</designation>
+        <salary>60000</salary>
+    </faculty>
+
+  
+</aptech>

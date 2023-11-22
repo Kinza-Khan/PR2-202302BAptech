@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT aptech (admission+,examination+)>
+<!ELEMENT admission (name,salary)>
+<!ELEMENT examination (email)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST name timings CDATA #REQUIRED>

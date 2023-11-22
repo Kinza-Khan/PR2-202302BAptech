@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <p>
+
+    </p>
+    <script>
+        let para = document.querySelector('p');
+        let car = {name:"mercedees",model:2019,drive:function(){
+                return  this.name+  " hello function"
+        },
+        driver : {d1:"ali",d2:"hamza"} 
+    
+    }
+    for (const key in car) {
+            // console.log(car[key])
+            // document.write(car[key])
+            if(typeof(car[key]) === "object"){
+                    for (const nkey in car[key]) {
+                            // console.log(car[key][nkey]);
+                          para.innerHTML += car[key][nkey] + "<br>"
+                    }
+            }
+            else if(typeof(car[key]) === "function"){
+                        // console.log(car[key]());
+                        para.innerHTML += car[key]() + "<br>";
+            }
+            else {  para.innerHTML += car[key] + "<br>" ;
+            }
+    }
+    // console.log(car.drive());
+    // console.log(car.driver.d2);
+    </script>
+</body>
+</html>
