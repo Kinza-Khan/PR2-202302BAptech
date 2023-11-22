@@ -72,9 +72,40 @@
                     $(this).css('border','3px solid green');
                     $(this).next('#error').hide();
                 }
-            })
+            });
 
-            // hello 
+            // LocalStorage WOrking
+
+            
+           function emptyFields(id){
+              if($(id).val() == ''){
+                  $(id).css('border','2px solid red');
+                  $(id).next('#error').show().text('please filled out this field').css('color','red');
+              }
+           }
+           $('#sub').click(function(){
+                let userName = $('#uName').val();
+                let userNameRE = /^[a-zA-Z\s]{3,}$/; 
+                let userEmail  = $('#uEmail').val();
+                let userEmailRE = /^[a-zA-Z0-9_]{4,}@[a-z]{5,}.[a-z]{2,}$/;
+                let userPassword  = $('#uPassword').val();
+                let userPasswordRE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d_\.\@]{8,}$/;
+                let myData = JSON.parse(localStorage.getItem('myData')) || [];
+                emptyFields('#uName');
+                emptyFields('#uEmail');
+                emptyFields('#uPassword');
+                if(userNameRE.test(userName) && userEmailRE.test(userEmail) && userPasswordRE.test(userPassword) ){
+                      myData.push({'name':userName,'email':userEmail , 'password':userPassword}) ;
+                         localStorage.setItem('myData',JSON.stringify(myData));
+                         alert('register successfully');
+                        //  $('input').val('');
+                        location.assign('rejex2.html');
+                         
+                }
+                else{
+                  alert('invalid data');
+                }
+           })
         </script>
   </body>
 </html>
