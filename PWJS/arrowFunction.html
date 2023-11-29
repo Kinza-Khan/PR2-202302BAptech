@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    
+                <button onclick="abc()">submit</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, possimus sint fuga ipsa perspiciatis voluptatem quaerat explicabo iure a quasi, ratione voluptate optio totam! Vel labore necessitatibus eius sint laudantium.</p>
+
+    <script>
+        // basic Function
+        function fun(){
+                // console.log('basic function');  
+                return 'BASIC FUNCTION'; 
+        }
+        console.log(fun());
+        // arrow function
+
+        let fun2 = (hell,name) => {
+            // return 'arrow function';
+            console.log('arrow function ' +  hell +' '  +name);
+        }
+     fun2('hello','ali');
+
+     let abc = ()=>{
+        let para = document.querySelector('p');
+        para.style.display = 'none';
+        // document.querySelector('p').style.display = 'none';
+     }
+          
+    </script>
+</body>
+
+</html>
